@@ -1,9 +1,9 @@
 <template>
   <form
+    v-on:submit.prevent="bookSubmit(bookData)"
     class=""
     action="#"
     method="post"
-    @submit.prevent="bookSubmit(bookData)"
   >
     <input
       type="text"
@@ -41,7 +41,7 @@
         />
         borrowed
       </label>
-      <label for="borrowed">
+      <label for="bought">
         <input
           type="radio"
           name="ownership"
