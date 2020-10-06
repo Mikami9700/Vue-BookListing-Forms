@@ -3,19 +3,17 @@
     <h1>{{ title }}</h1>
     <input type="text" placeholder="Search Books" v-model="searchInput" />
     <ul>
-      <BookItem v-for="book in searchedBooks" :key="book.title" :book="book" />
+      <book-item v-for="book in searchedBooks" :key="book.title" :book="book" />
     </ul>
     <hr />
     <BookForm @addBook="appendBook" />
     <hr />
     <h2>Filtered Books By Ownership</h2>
     <select name="holding" id="holding" v-model="holding">
-      <option v-for="(filter, index) in filters" :key="index">
-        {{ filter }}
-      </option>
+      <option v-for="filter in filters">{{ filter }}</option>
     </select>
     <ul>
-      <BookItem v-for="book in filteredBooks" :key="book.title" :book="book" />
+      <book-item v-for="book in filteredBooks" :key="book.title" :book="book" />
     </ul>
   </div>
 </template>
