@@ -29,6 +29,7 @@ export default {
   data() {
     return {
       title: "All Books",
+      states: ["Want to Read", "Read", "Reading"],
       books: [
         {
           title: "Self-Reliance",
@@ -45,25 +46,6 @@ export default {
         {
           title: "Amusing Ourselves to Death",
           author: "Neil Postman",
-          finishedReading: true,
-          ownership: "borrowed",
-        },
-        {
-          title:
-            "Daring Greatly: How the courage to be vulnerable transforms the way we live, love, parent and lead",
-          author: "Brene Brown",
-          finishedReading: true,
-          ownership: "bought",
-        },
-        {
-          title: "Don't make me think",
-          author: "Steve Krug",
-          finishedReading: false,
-          ownership: "bought",
-        },
-        {
-          title: "DRiVE",
-          author: "Daniel Pink",
           finishedReading: true,
           ownership: "borrowed",
         },
